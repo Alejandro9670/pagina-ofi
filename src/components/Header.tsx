@@ -93,7 +93,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                   currentPage === 'team' ? 'text-[#0095eb]' : 'text-gray-700 hover:text-[#0095eb]'
                 }`}
               >
-                Equipo
+                Nuestro Equipo
               </button>
               <button
                 onClick={() => handleNavigation('home', '#contacto')}
@@ -149,7 +149,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                 onClick={() => handleNavigation('team')}
                 className={currentPage === 'team' ? 'text-[#0095eb] text-left' : 'text-gray-700 hover:text-[#0095eb] text-left'}
               >
-                Equipo
+                Nuestro Equipo
               </button>
               <button
                 onClick={() => handleNavigation('home', '#contacto')}

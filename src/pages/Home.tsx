@@ -1,17 +1,72 @@
-import { Shield, Phone, Mail, MapPin, Heart, Home, Car, Briefcase, Building2, Users, FileCheck } from 'lucide-react';
+import { Shield, Phone, Mail, MapPin, Heart, Home, Car, Briefcase, Building2, Users, FileCheck, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 export default function HomePage() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = [
+    '/Banner 1.jpg',
+    '/Banner 2.jpg',
+    '/Banner 3.jpg'
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
   return (
     <>
       {/* Hero Section */}
-      <section id="inicio" className="relative h-[600px] bg-gray-900">
+      <section id="inicio" className="relative h-screen bg-gray-900">
         <div className="absolute inset-0">
-          <img
-            src="/inicio pagina corredora.jpg"
-            alt="Seguros de vida y generales"
-            className="w-full h-full object-cover opacity-40"
-          />
+          {slides.map((slide, index) => (
+            <img
+              key={index}
+              src={slide}
+              alt={`Seguros de vida y generales ${index + 1}`}
+              className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${
+                index === currentSlide ? 'opacity-100' : 'opacity-0'
+              }`}
+            />
+          ))}
         </div>
+
+        <button
+          onClick={prevSlide}
+          className="absolute left-6 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full backdrop-blur-sm transition-all z-10"
+        >
+          <ChevronLeft className="h-6 w-6" />
+        </button>
+
+        <button
+          onClick={nextSlide}
+          className="absolute right-6 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full backdrop-blur-sm transition-all z-10"
+        >
+          <ChevronRight className="h-6 w-6" />
+        </button>
+
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-10">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all ${
+                index === currentSlide ? 'bg-white w-8' : 'bg-white/50'
+              }`}
+            />
+          ))}
+        </div>
+
         <div className="relative max-w-[1240px] mx-auto px-6 h-full flex items-center">
           <div className="max-w-2xl">
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
