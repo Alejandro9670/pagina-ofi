@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section id="inicio" className="relative h-[600px] bg-gray-900">
+      <section id="inicio" className="relative h-screen bg-gray-900">
         <div className="absolute inset-0">
           <img
             src="/inicio pagina corredora.jpg"
