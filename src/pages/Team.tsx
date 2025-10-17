@@ -32,7 +32,7 @@ const teamMembers = [
   {
     name: "Laura Fernández",
     position: "Especialista en Seguros de Hogar y Auto",
-    image: "https://images.pexels.com/photos/3756011/pexels-photo-3756011.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "https://images.pexels.com/photos/3756707/pexels-photo-3756707.jpeg?auto=compress&cs=tinysrgb&w=400",
     description: "Laura cuenta con amplia experiencia en seguros patrimoniales. Su enfoque detallista garantiza que cada cliente obtenga la mejor cobertura para su hogar y vehículos.",
     email: "laura.fernandez@securelife.es"
   },
