@@ -27,7 +27,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section id="inicio" className="relative w-full h-[400px] md:h-[450px] lg:h-[550px] xl:h-[600px] bg-gray-900 overflow-hidden">
+      <section id="inicio" className="relative w-full h-[400px] md:h-[450px] lg:h-[420px] xl:h-[450px] bg-gray-900 overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
           {slides.map((slide, index) => (
             <img
