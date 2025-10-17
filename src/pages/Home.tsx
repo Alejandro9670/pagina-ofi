@@ -27,17 +27,21 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section id="inicio" className="relative h-screen bg-gray-900">
-        <div className="absolute inset-0">
+      <section id="inicio" className="relative h-screen bg-gray-900 overflow-hidden">
+        <div className="absolute inset-0 w-full h-full">
           {slides.map((slide, index) => (
-            <img
+            <div
               key={index}
-              src={slide}
-              alt={`Seguros de vida y generales ${index + 1}`}
-              className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${
+              className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
                 index === currentSlide ? 'opacity-100' : 'opacity-0'
               }`}
-            />
+            >
+              <img
+                src={slide}
+                alt={`Seguros de vida y generales ${index + 1}`}
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
           ))}
         </div>
 
