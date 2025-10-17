@@ -1,4 +1,4 @@
-import { Shield, Phone, Mail, MapPin, Heart, Home, Car, Briefcase, Building2, Users, FileCheck, ArrowRight } from 'lucide-react';
+import { Shield, Phone, Mail, MapPin, Heart, Home, Car, Briefcase, Building2, Users, FileCheck } from 'lucide-react';
 
 export default function HomePage() {
   return (
@@ -17,13 +17,9 @@ export default function HomePage() {
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Protegemos lo que más importa
             </h2>
-            <p className="text-xl text-gray-200 mb-8 leading-relaxed">
+            <p className="text-xl text-gray-200 leading-relaxed">
               Somos expertos en seguros con más de 15 años de experiencia. Asesoramiento personalizado para particulares y empresas.
             </p>
-            <button className="bg-[#0095eb] text-white px-8 py-4 rounded hover:bg-[#0077bb] transition-colors font-medium inline-flex items-center space-x-2">
-              <span>Solicitar Cotización</span>
-              <ArrowRight className="h-5 w-5" />
-            </button>
           </div>
         </div>
       </section>
@@ -84,7 +80,7 @@ export default function HomePage() {
             <div className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="bg-[#0095eb] bg-opacity-10 p-3 rounded-lg">
-                  <ArrowRight className="h-8 w-8 text-[#0095eb]" />
+                  <Shield className="h-8 w-8 text-[#0095eb]" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#161922]">Nuestra Visión</h3>
               </div>
