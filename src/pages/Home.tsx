@@ -34,7 +34,7 @@ export default function HomePage() {
               key={index}
               src={slide}
               alt={`Seguros de vida y generales ${index + 1}`}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+              className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${
                 index === currentSlide ? 'opacity-100' : 'opacity-0'
               }`}
             />
