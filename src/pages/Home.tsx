@@ -27,16 +27,17 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section id="inicio" className="relative w-full h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px] bg-gray-900 overflow-hidden">
-        <div className="absolute inset-0 w-full h-full">
+      <section id="inicio" className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px] bg-white overflow-hidden">
+        <div className="absolute inset-0 w-full h-full flex items-center justify-center">
           {slides.map((slide, index) => (
             <img
               key={index}
               src={slide}
               alt={`Seguros de vida y generales ${index + 1}`}
-              className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${
+              className={`max-w-full max-h-full object-contain transition-opacity duration-1000 ${
                 index === currentSlide ? 'opacity-100' : 'opacity-0'
               }`}
+              style={{ position: index === currentSlide ? 'relative' : 'absolute' }}
             />
           ))}
         </div>
