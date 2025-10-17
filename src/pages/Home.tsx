@@ -4,9 +4,9 @@ import { useState, useEffect } from 'react';
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    '/Banner 1.jpg',
-    '/Banner 2.jpg',
-    '/Banner 3.jpg'
+    '/a55d4063-df0f-4b27-8142-4aa37e82bcc5.jpg',
+    '/ea0c8e1e-2d2f-48da-9a70-02825ce7e443.jpg',
+    '/Banner 3 copy.jpg'
   ];
 
   useEffect(() => {
@@ -27,20 +27,16 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section id="inicio" className="relative w-screen h-screen bg-gray-900 overflow-hidden">
-        <div className="absolute inset-0 w-screen h-screen">
+      <section id="inicio" className="relative w-full h-[400px] md:h-[450px] lg:h-[420px] xl:h-[450px] bg-gray-900 overflow-hidden">
+        <div className="absolute inset-0 w-full h-full lg:flex lg:justify-center lg:items-center">
           {slides.map((slide, index) => (
-            <div
+            <img
               key={index}
-              className={`absolute inset-0 w-screen h-screen transition-opacity duration-1000 ${
+              src={slide}
+              alt={`Seguros de vida y generales ${index + 1}`}
+              className={`absolute inset-0 w-full h-full object-cover lg:relative lg:w-auto lg:h-full lg:max-h-full lg:object-cover transition-opacity duration-1000 ${
                 index === currentSlide ? 'opacity-100' : 'opacity-0'
               }`}
-              style={{
-                backgroundImage: `url(${slide})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-              }}
             />
           ))}
         </div>
