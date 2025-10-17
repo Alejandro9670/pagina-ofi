@@ -18,7 +18,7 @@ const teamMembers = [
   {
     name: "Ana López",
     position: "Asesora Senior de Seguros",
-    image: "https://images.pexels.com/photos/3756616/pexels-photo-3756616.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "https://images.pexels.com/photos/3756620/pexels-photo-3756620.jpeg?auto=compress&cs=tinysrgb&w=400",
     description: "Experta en seguros de vida y salud. Ana se especializa en crear soluciones personalizadas que se adaptan perfectamente a las necesidades de cada cliente.",
     email: "ana.lopez@securelife.es"
   },
