@@ -7,7 +7,7 @@ export default function HomePage() {
       <section id="inicio" className="relative h-[600px] bg-gray-900">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/5473955/pexels-photo-5473955.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            src="/inicio pagina corredora.jpg"
             alt="Seguros de vida y generales"
             className="w-full h-full object-cover opacity-40"
           />
