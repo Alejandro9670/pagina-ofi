@@ -4,9 +4,9 @@ import { useState, useEffect } from 'react';
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    '/Banner 1.jpg',
-    '/Banner 2.jpg',
-    '/Banner 3.jpg'
+    '/a55d4063-df0f-4b27-8142-4aa37e82bcc5.jpg',
+    '/ea0c8e1e-2d2f-48da-9a70-02825ce7e443.jpg',
+    '/Banner 3 copy.jpg'
   ];
 
   useEffect(() => {
