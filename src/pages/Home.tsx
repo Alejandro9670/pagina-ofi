@@ -9,7 +9,7 @@ export default function HomePage() {
           <img
             src="/inicio pagina corredora.jpg"
             alt="Seguros de vida y generales"
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover"
           />
         </div>
         <div className="relative max-w-[1240px] mx-auto px-6 h-full flex items-center">
